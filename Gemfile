@@ -72,4 +72,6 @@ group :test do
   gem "webdrivers"
   gem 'rspec-rails'
   gem 'ffi'
+  gem "factory_bot_rails"
+  gem 'faker'
 end
