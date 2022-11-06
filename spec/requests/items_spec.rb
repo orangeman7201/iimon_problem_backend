@@ -13,7 +13,7 @@ RSpec.describe "Items", type: :request do
   describe "/new" do
     subject { get new_item_path }
     context 'ログインしていないとき' do
-      it "returns http success" do
+      it "ログインページにリダイレクトされること" do
         expect(subject).to redirect_to new_user_session_path
       end
     end
@@ -30,7 +30,7 @@ RSpec.describe "Items", type: :request do
     subject { post items_path, params: { name: "price", price: 200, text: "test"} }
 
     context 'ログインしていないとき' do
-      it "returns http success" do
+      it "ログインページにリダイレクトされること" do
         expect(subject).to redirect_to new_user_session_path
       end
     end
